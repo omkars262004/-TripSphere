@@ -375,8 +375,7 @@ if (isset($_POST['Login']))
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        password_verify($password, $user['password']);
-
+        //changing password_verify($password, $user['password']) to $password === $user['password']
         if ($password === $user['password'])
         {
            
